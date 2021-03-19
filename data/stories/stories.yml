@@ -1,0 +1,349 @@
+version: "2.0"
+
+stories:
+
+
+- story : when user ask about introduction of company
+  steps:
+  - intent : intro
+  - action : action_intro
+
+- story: when user ask about Ceo or mentor
+  steps:
+  - intent: know_person
+  - action: action_know_person
+
+- story : when user ask about address of sandlogic
+  steps :
+  - intent : address
+  - action : action_address
+
+- story : when user action about meaning of logo/company
+  steps :
+  - intent : meaning
+  - action : action_meaning
+
+- story : when user ask about contact detail of company
+  steps :
+  - intent : contact
+  - action: action_contact
+
+- story : vision_mission
+  steps:
+  - intent : vision_mission
+  - action : action_vision_mission
+
+- story : workflow
+  steps :
+  - intent : workflow
+  - action : action_workflow
+
+- story : why_sandlogic
+  steps :
+  - intent : why_sandlogic
+  - action : action_why_sandlogic
+
+- story : office_timing
+  steps :
+  - intent : office_timing
+  - action : action_office_timing
+
+- story : hiring
+  steps :
+  - intent : hiring
+  - action : action_hirings
+
+- story : company_industries
+  steps :
+    - intent : company_industries
+    - action : action_company_industries
+
+- story : company_sectors
+  steps :
+    - intent : company_sectors
+    - action : action_company_sectors
+
+- story : use_cases
+  steps :
+    - intent : use_cases
+    - action : action_use_cases
+
+- story : ask_projects
+  steps :
+  - intent : ask_projects
+  - action: action_product_service
+
+- story : love_emotion
+  steps :
+    - intent : love_emotion
+    - action : utter_love_emotion
+
+- story : bore_emotion
+  steps :
+    - intent : bore_emotion
+    - action : utter_bore_emotion
+
+- story : intro, yes
+  steps:
+  - intent : intro
+  - action : action_intro
+  - intent : affirm
+  - action : action_affirm
+
+- story: know_person, yes
+  steps:
+  - intent: know_person
+  - action: action_know_person
+  - intent: affirm
+  - action: action_affirm
+
+- story : address, yes
+  steps :
+  - intent : address
+  - action : action_address
+  - intent: affirm
+  - action: action_affirm
+
+- story : meaning, yes
+  steps :
+  - intent : meaning
+  - action : action_meaning
+  - intent: affirm
+  - action: action_affirm
+
+- story : contact, yes
+  steps :
+  - intent : contact
+  - action: action_contact
+  - intent: affirm
+  - action: action_affirm
+
+- story : Vision_mission, yes
+  steps:
+  - intent : vision_mission
+  - action : action_vision_mission
+  - intent: affirm
+  - action: action_affirm
+
+- story : workflow, yes
+  steps :
+  - intent : workflow
+  - action : action_workflow
+  - intent: affirm
+  - action: action_affirm
+
+- story : why_sandlogic, yes
+  steps :
+  - intent : why_sandlogic
+  - action : action_why_sandlogic
+  - intent: affirm
+  - action: action_affirm
+
+- story : office_timing, yes
+  steps :
+  - intent : office_timing
+  - action : action_office_timing
+  - intent: affirm
+  - action: action_affirm
+
+- story : hiring, yes
+  steps :
+  - intent : hiring
+  - action : action_hirings
+  - intent: affirm
+  - action: action_affirm
+
+- story : company_industries, yes
+  steps :
+  - intent : company_industries
+  - action : action_company_industries
+  - intent: affirm
+  - action: action_affirm
+
+- story : company_sectors, yes
+  steps :
+  - intent : company_sectors
+  - action : action_company_sectors
+  - intent: affirm
+  - action: action_affirm
+
+- story : use_cases, yes
+  steps :
+  - intent : use_cases
+  - action : action_use_cases
+  - intent: affirm
+  - action: action_affirm
+
+- story : project_technologies, yes
+  steps :
+  - intent : project_technologies
+  - action : action_product_service_technologies
+  - intent: affirm
+  - action: action_affirm
+
+- story : cost, yes
+  steps :
+  - intent : cost
+  - action : action_cost
+  - intent: affirm
+  - action: action_affirm
+
+- story : intro, no
+  steps:
+  - intent : intro
+  - action : action_intro
+  - intent : deny
+  - action : action_deny
+
+- story: know_person, no
+  steps:
+  - intent: know_person
+  - action: action_know_person
+  - intent: deny
+  - action: action_deny
+
+- story : address, no
+  steps :
+  - intent : address
+  - action : action_address
+  - intent: deny
+  - action: action_deny
+
+- story : meaning, no
+  steps :
+  - intent : meaning
+  - action : action_meaning
+  - intent: deny
+  - action: action_deny
+
+- story : contact, no
+  steps :
+  - intent : contact
+  - action: action_contact
+  - intent: deny
+  - action: action_deny
+
+- story : Vision_mission, no
+  steps:
+  - intent : vision_mission
+  - action : action_vision_mission
+  - intent: deny
+  - action: action_deny
+
+- story : workflow, no
+  steps :
+  - intent : workflow
+  - action : action_workflow
+  - intent: deny
+  - action: action_deny
+
+- story : why_sandlogic, no
+  steps :
+  - intent : why_sandlogic
+  - action : action_why_sandlogic
+  - intent: deny
+  - action: action_deny
+
+- story : office_timing, no
+  steps :
+  - intent : office_timing
+  - action : action_office_timing
+  - intent: deny
+  - action: action_deny
+
+- story : hiring, no
+  steps :
+  - intent : hiring
+  - action : action_hirings
+  - intent: deny
+  - action: action_deny
+
+- story : company_industries, no
+  steps :
+  - intent : company_industries
+  - action : action_company_industries
+  - intent: deny
+  - action: action_deny
+
+- story : company_sectors, no
+  steps :
+  - intent : company_sectors
+  - action : action_company_sectors
+  - intent: deny
+  - action: action_deny
+
+- story : use_cases, no
+  steps :
+  - intent : use_cases
+  - action : action_use_cases
+  - intent: deny
+  - action: action_deny
+
+- story : project_technologies, no
+  steps :
+  - intent : project_technologies
+  - action : action_product_service_technologies
+  - intent: deny
+  - action: action_deny
+
+- story : cost, no
+  steps :
+  - intent : cost
+  - action : action_cost
+  - intent: deny
+  - action: action_deny
+
+#- story : project_info
+#  steps :
+#  - intent : project_info
+#  - action : action_product_service_info
+
+#- story : project_benefits
+#  steps :
+#  - intent : project_benefits
+#  - action : action_product_service_benefits
+#
+#- story : project_features
+#  steps :
+#  - intent : project_features
+#  - action : action_product_service_features
+
+- story : project_technologies
+  steps :
+  - intent : project_technologies
+  - action : action_product_service_technologies
+
+- story : cost
+  steps :
+  - intent : cost
+  - action : action_cost
+
+- story : word_meaning
+  steps :
+    - intent : word_meaning
+    - action : action_word_meaning
+
+
+#- story: Product info + Switch to Service Info, deny
+#  steps:
+#  - or:
+#    - intent: Product info
+#      entities:
+#        - products
+#    - intent: ask_projects
+#      entities:
+#        - project_type : products
+#  - action:
+#  - active_loop: transaction_search_form
+#  - or:
+#    - intent: transfer_money
+#    - intent: pay_cc
+#  - action: action_switch_forms_ask
+#  - slot_was_set:
+#    - next_form_name: another form
+#  - intent: deny
+#  - action: action_switch_forms_deny
+#  - slot_was_set:
+#    - next_form_name: null
+#  - action: transaction_search_form
+#  - active_loop: transaction_search_form

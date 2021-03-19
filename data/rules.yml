@@ -1,0 +1,182 @@
+version: "2.0"
+
+rules:
+
+- rule: utter greet anytime the user greets
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+
+
+
+- rule : out_of_scope
+  steps :
+  - intent : out_of_scope
+  - action : utter_out_of_scope
+
+- rule : intro
+  steps:
+  - intent : intro
+  - action : action_intro
+
+- rule: know_person
+  steps:
+  - intent: know_person
+  - action: action_know_person
+
+- rule : address
+  steps :
+  - intent : address
+  - action : action_address
+
+- rule : meaning
+  steps :
+  - intent : meaning
+  - action : action_meaning
+
+- rule : contact
+  steps :
+  - intent : contact
+  - action: action_contact
+
+- rule : Vision_mission
+  steps:
+  - intent : vision_mission
+  - action : action_vision_mission
+
+- rule : workflow
+  steps :
+  - intent : workflow
+  - action : action_workflow
+
+- rule : why_sandlogic
+  steps :
+  - intent : why_sandlogic
+  - action : action_why_sandlogic
+
+- rule : office_timing
+  steps :
+  - intent : office_timing
+  - action : action_office_timing
+
+- rule : hiring
+  steps :
+  - intent : hiring
+  - action : action_hirings
+
+- rule : company_industries
+  steps :
+    - intent : company_industries
+    - action : action_company_industries
+
+- rule : company_sectors
+  steps :
+    - intent : company_sectors
+    - action : action_company_sectors
+
+- rule : use_cases
+  steps :
+    - intent : use_cases
+    - action : action_use_cases
+
+- rule : ask_projects
+  steps :
+    - intent : ask_projects
+    - action : action_product_service
+
+- rule : project_technologies
+  steps :
+  - intent : project_technologies
+  - action : action_product_service_technologies
+
+- rule : cost
+  steps :
+  - intent : cost
+  - action : action_cost
+
+- rule: When user says something other than english
+  steps:
+    - intent: non_english
+    - action: utter_non_english
+
+- rule: When user says help
+  steps:
+    - intent : help
+    - action : utter_help
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: Activate project_info_form when no other form is active
+  condition:
+  - active_loop: null
+  steps:
+  - intent: project_info
+  - action: project_info_form
+  - active_loop: project_info_form
+
+- rule: Activate project_features_form when no other form is active
+  condition:
+  - active_loop: null
+  steps:
+  - intent: project_features
+  - action: project_features_form
+  - active_loop: project_features_form
+
+- rule: Activate project_benefits_form when no other form is active
+  condition:
+  - active_loop: null
+  steps:
+  - intent: project_benefits
+  - action: project_benefits_form
+  - active_loop: project_benefits_form
+
+- rule: Submit project_info_form while not switched from previous form
+  condition:
+  - active_loop: project_info_form
+  - slot_was_set:
+    - previous_form_name: null
+  steps:
+  - action: project_info_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_product_service_info
+
+- rule: Submit project_features_form while not switched from previous form
+  condition:
+  - active_loop: project_features_form
+  - slot_was_set:
+    - previous_form_name: null
+  steps:
+  - action: project_features_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_product_service_features
+
+- rule: Submit project_benefits_form while not switched from previous form
+  condition:
+  - active_loop: project_benefits_form
+  - slot_was_set:
+    - previous_form_name: null
+  steps:
+  - action: project_benefits_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_product_service_benefits
+#
+
