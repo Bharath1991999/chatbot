@@ -57,6 +57,8 @@ nlu:
     - [Sandlogic](company)
     - [your company](company)
     - [this company](company)
+    - who are u
+    - About [Sandlogic](company)
 - intent: know_person
   examples: |
     - Can I know about [founder](person) of company
@@ -117,6 +119,7 @@ nlu:
     - Let me know about [CEO]{"entity": "person", "value": "founder"}
     - [CEO]{"entity": "person", "value": "founder"}  of company?
     - Give details about [CEO]{"entity": "person", "value": "founder"} ?
+    - about [founder](person)
 - intent: address
   examples: |
     - Where is SandLogic located
@@ -174,6 +177,7 @@ nlu:
     - [usa] {"entity": "location", "value": "USA"} address
     - india {"entity": "location", "value": "India"} address?
     - [usa] {"entity": "location", "value": "USA"} address?
+    - where re u from
 - intent: meaning
   examples: |
     - Tell me about your company name
@@ -440,6 +444,10 @@ nlu:
     - [email]{"entity": "contact", "value": "mail"} of company
     - [email]{"entity": "contact", "value": "mail"}
     - connect me with your executive
+    - is there any [mobile number]{"entity": "contact", "value": "mobile"} available
+    - is there any alternative [mail id]{"entity": "contact", "value": "mail"} for contacting company
+    - what are ur contact detals
+    - contact details please
 - intent: vision_mission
   examples: |
     - SandLogic [vision](statement)
@@ -534,6 +542,7 @@ nlu:
     - Share the working style of your company
     - Approaches to start project
     - SandLogic approach to do project
+    - Intro to your projects
 - intent: why_sandlogic
   examples: |
     - advantage of working with you
@@ -756,6 +765,8 @@ nlu:
     - what is your expertise?
     - industry
     - what are industry you can help?
+    - which domain do u work
+    - How can [SARA](project) help Manufacturing industry
 - intent: company_sectors
   examples: |
     - What sectors your company works for
@@ -810,6 +821,7 @@ nlu:
     - areas where you expect customers from
     - which area you can guide me in?
     - what you can guide me with?
+    - Sector
 - intent: use_cases
   examples: |
     - Do you work with Deep [Face]{"entity": "use_case", "value": "face"}
@@ -978,6 +990,9 @@ nlu:
     - Ever worked in [ASR]{"entity": "use_case", "value": "Audio"}
     - Let me know if you have done anything in [ASR]{"entity": "use_case", "value": "Audio"}
     - [Facial Recognition](word)
+    - Generic [OCR](use_case)
+    - Human [Action Recognition](use_case)
+    - [Document Classification](use_case)
 - intent: ask_projects
   examples: |
     - What [services](project_type) you provide?
@@ -1100,6 +1115,7 @@ nlu:
     - how do you add intelligence?
     - what do you do?
     - Ai solution?
+    - what kind of help you can do?
 - intent: project_info
   examples: |
     - What is [EdgeMatrix.IO]{"entity": "project", "value": "EdgeMatrix"}
@@ -1378,6 +1394,14 @@ nlu:
     - [edgematrix.io]{"entity": "project", "value": "EdgeMatrix"}
     - [txtr.ai]{"entity": "project", "value": "txtr"}
     - [Visual](use_case) [Search](project)
+    - Knowing any dataset of [3D](project) buildings with [annotations](word) for [research]{"entity": "project", "value": "R&D"} on automatic building [and](project) city synthesis?
+    - What is [Data Modelling](project)?
+    - Can [SARA](project) take [Visual](project) Inputs?
+    - is [SARA](project) an [RPA](word)?
+    - does [AuVi]{"entity": "project", "value": "AUVI"} support auto [annotations](word)
+    - How can [SARA](project) help me
+    - I want demo on [Auvi]{"entity": "project", "value": "AUVI"}
+    - what is [AuVi]{"entity": "project", "value": "AUVI"}
 - intent: project_benefits
   examples: |
     - Please let me know uses of this product
@@ -2568,6 +2592,8 @@ nlu:
     - Ok. What about this [on-premises](word)
     - Ok. What about this [nlp](word)
     - Ok. What about this [convolutional networks](word)
+    - [CNN](word)
+    - [Neural Networks](word)
 - intent: greet
   examples: |
     - Bom dia
@@ -2705,6 +2731,7 @@ nlu:
     - yoo
     - ssup?
     - helleo
+    - how do you greet someone ?
 - intent: goodbye
   examples: |
     - Bye
@@ -2974,6 +3001,10 @@ nlu:
     - cool beans
     - sounds good!
     - really
+    - GANs
+    - Python
+    - Caffe
+    - Scikit
 - intent: deny
   examples: |
     - I don't want to
@@ -3140,6 +3171,9 @@ nlu:
     - how do I use this
     - how can you help me
     - What are the things that you can do?
+    - you brought me here
+    - HELP
+    - I need HeLp
 - intent: thankyou
   examples: |
     - thank you goodbye
@@ -3217,6 +3251,7 @@ nlu:
     - I wish I could marry you
     - Tell me if you can marry me
     - Can I marry you my love
+    - hate you
 - intent: bore_emotion
   examples: |
     - i am bored
@@ -3230,11 +3265,16 @@ nlu:
     - how you can distract me
     - i am sooo bored
     - what you can do to keep me engaged
+    - suggest me songs to listen to
+    - tell me a joke
+    - Tell me a story .
 - intent: documentanalyzer
   examples: |
     - [Document]{"entity": "use_case", "value": "NLP"} Summarization
     - [Document]{"entity": "use_case", "value": "NLP"} [Knowledge Base](project)
     - [Document NLP](project)
+    - [Document Analyzer](use_case)
+    - [Document Analysis](use_case)
 - intent: gpt
   examples: |
     - GPT
@@ -3245,6 +3285,9 @@ nlu:
   examples: |
     - [Handwritten](project) [Document Management](project)
     - [OCR](use_case)
+    - License Card [OCR](use_case)
+    - Business Card [Reader](person)
+    - Can [SARA](project) take [OCR](use_case) inputs
 - intent: language_translator
   examples: |
     - Tamil to Oriya
@@ -3262,6 +3305,146 @@ nlu:
 - intent: facial_recogintion
   examples: |
     - [Facial](use_case) [Emotions](use_case)
+- intent: mining
+  examples: |
+    - Process Mining
+- intent: custom_accelarator
+  examples: |
+    - What is an [accelarator](project).
+    - Any [custom accelarator](project) of sandlogi?
+- intent: fpga
+  examples: |
+    - What is fpga
+    - Anything on [FPGA](use_case)?
+- intent: hardware
+  examples: |
+    - What will be the future of SandLogic in [hardware](project)
+    - What can I expect from [hardware](project)?
+- intent: edge_matrix
+  examples: |
+    - What is [edge matrix]{"entity": "project", "value": "EdgeMatrix"}
+    - Any thing on [edge devices](project)?
+- intent: company_achievement
+  examples: |
+    - What are your [achievements](project)
+- intent: competiton
+  examples: |
+    - What is mp challenge
+- intent: out_of_scope
+  examples: |
+    - What are you talking
+    - what's the worlds biggest cat ?
+    - what is the difference between a cheetah and a leopard ?
+    - examples of a few short day plants
+    - how to make pnb sandwich
+    - cheese cake recipies
+    - how many people in the world have blue eyes ?
+    - suggest me your favorite book
+    - enunciate more about ozone depletion
+    - name some organic salts
+    - what's your favorite weather ?
+    - what's your favorite color?
+    - how do you describe a flower ?
+    - what's 2+2 ?
+    - is wool a [natural](use_case) or a synthethic fibre ?
+    - how to bake a cake ?
+    - is Tomato a fruit ?
+    - Is tomato a fruit or a vegetable?
+- intent: products_name
+  examples: |
+    - What are SandLogic [products](project_type)
+    - whayt are projects of SL
+- intent: annotation
+  examples: |
+    - How do I do multi label image [annotation]{"entity": "word", "value": "AUVI"} using semantic template?
+    - what are types of [annota?tions](word)
+    - what are bounding boxes?
+    - what is [annotations](word)?
+- intent: math
+  examples: |
+    - what is [rectangle](word)?
+    - what is ellipse?
+    - what is line?
+- intent: segmentation
+  examples: |
+    - What is the best segmentation algorithm for segmenting of leaf region from the real field images
+- intent: data_modelling
+  examples: |
+    - what  is [data](word)
+    - Distinguish between structured and unstructured data
+- intent: computer_vision
+  examples: |
+    - do you work on [computer vision]{"entity": "use_case", "value": "visual"}
+- intent: how_are_you?
+  examples: |
+    - how are you doing today [SARA](project) ?
+    - how are u
+- intent: document_digitization
+  examples: |
+    - [Document Digitization](use_case)
+- intent: adhar_card_reader
+  examples: |
+    - Aadhar Card [Reader](project)
+- intent: kyc_automation
+  examples: |
+    - [KYC automation](word)
+- intent: pan_card_reader
+  examples: |
+    - PAN Card [reader](person)
+- intent: video_classification
+  examples: |
+    - Video Classification
+- intent: audio_video_data
+  examples: |
+    - Can [SARA](project) work with [Audio](project) & [Visual](use_case) data
+- intent: audio_data
+  examples: |
+    - Can [SARA](project) [Audio inputs](project)
+- intent: bot
+  examples: |
+    - What is [SARA](project)
+- intent: auvi
+  examples: |
+    - What are the backbones supported by [Auvi]{"entity": "project", "value": "AUVI"}
+    - who can use [AuVi]{"entity": "project", "value": "AUVI"}
+    - [auvi]{"entity": "project", "value": "AUVI"}?
+- intent: deep_learning
+  examples: |
+    - [Deep Learning](word)
+- intent: nlu_fallback
+  examples: |
+    - what is box
+    - Tensorflow
+    - What frameworks do you guys work on
+    - [Pytorch](project)
+    - Sector u work
+- intent: gan
+  examples: |
+    - GAN
+- intent: audio_recogniton
+  examples: |
+    - Voice based authentication
+- intent: programming_language
+  examples: |
+    - C++
+- intent: audio_recognition
+  examples: |
+    - Voice [recognition](use_case)
+- intent: workplace_safety
+  examples: |
+    - [workplace]{"entity": "use_case", "value": "workspace"} safety solutions
+- intent: technologies
+  examples: |
+    - Pandas
+- intent: SARA
+  examples: |
+    - what is [sARA]{"entity": "project", "value": "SARA"}
+- intent: services_name
+  examples: |
+    - What are the [services](project_type) you provide
+- intent: AI
+  examples: |
+    - What is [AI](word)
 - synonym: founder
   examples: |
     - who started
@@ -3352,6 +3535,8 @@ nlu:
     - document
     - text
     - chatbot
+    - Document
+    - Text
 - synonym: logistics
   examples: |
     - logistics automation
